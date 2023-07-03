@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+            // alert("ready!");
+            fomenutomb();
+            fomenu();
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="col-10 offset-md-1">
+        <div style="background-color:blue"> <br>
+            <center>
+                <h3 style="color: white;">Packing alapanyag hibák, és kezelésük: </h3>
+            </center><br>
+        </div>
+        <!-- fomenu--->
+        <br>
+        <nav id="fomenu" class="nav nav-pills flex-column flex-sm-row">
+            <a class=" fomenu flex-sm-fill text-sm-center nav-link active" aria-current="page" href="index.html">Hiba tipusok</a>
+            <!-- <a id="db" onclick="uzenet()" class="fomenu flex-sm-fill text-sm-center nav-link" href="db.html">Display box </a> -->
+            <a id="db" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="cat_change('db')" href="#">Display box </a>
+            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);cat_change('ms')" href="#">Master shiper</a>
+            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);cat_change('insert')" href="#">Insert</a>
+            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="cat_change('egyeb')" href="#">Egyéb</a>
+            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenu()" href="#">Alert írás</a>
+        </nav>
+        <div style="margin-top:40px" class="col-3 ">
+            <nav class="nav nav-pills flex-column ">
+                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Ragasztás hibák:</a>
+                <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Kevés</a>
+                <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Rossz pozíció</a>
+                <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Sok</a>
+                <!-- <a id="db" onclick="uzenet()" class="fomenu flex-sm-fill text-sm-center nav-link" href="db.html">Display box </a> -->
+                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Kivágás hibák:</a>
+                <a class="btn btn-danger oldalmenu " href="#">Gyenge</a>
+                <a class="btn btn-warning oldalmenu " href="#">   Lenyomatos</a>
+                <a class="btn btn-warning oldalmenu " href="#">   szemetes</a>
+                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Krizline hibák:</a>
+                <a class="btn btn-warning oldalmenu " href="#">Gyenge, hiányzik</a>
+                <a class="btn btn-warning oldalmenu " href="#"> más tipus</a>
+                <a class="btn btn-warning oldalmenu " href="#">  roszz helyen van</a>
+                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">nyomtatás hibák:</a>
+                <a class="btn btn-warning oldalmenu " href="#">Hiányos</a>
+                <a class="btn btn-warning oldalmenu " href="#"> foltosc, szennyezett</a>
+
+                <a class="btn btn-warning oldalmenu " href="#"> Színhibás</a>
+                <a class="btn btn-warning oldalmenu " href="#"> Artwork</a>
+            </nav>
+        </div>
+
+        <!--tartalom-->
+        <div class="col-9 ">
+
+        </div>
+        <!--part-->
+
+        <div id="hiddenhtmlpart" hidden class="">
+
+            <a id="menu1" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);" href="#">Display box </a>
+
+            <a id="oldalmenukat1" class=" btn btn-secondary oldalmenu " aria-current="page " href="# ">Ragasztás hibák:</a>
+            <a id="oldalmenu1" class="btn btn-warning oldalmenu " onclick="oldalmenuactiv(this);" href="#">Hiányos</a>
+
+
+        </div>
+
+
+
+    </div>
+    <script src="js/rekordok.js "></script>
+    <script src="js/base.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+</html>
