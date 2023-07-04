@@ -76,7 +76,7 @@ function fomenu() {
     fomenulist.forEach(myFunction);
 
     function myFunction(item, index) {
-        menuitem = $("#menu1").clone()
+        menuitem = $("#menu").clone()
         $(menuitem).text(linktext[item]);
         $(menuitem).attr("id", item);
         $(menuitem).attr("onclick", "fomenuactiv(this); listaz(" + item + "); ");
