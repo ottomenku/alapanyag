@@ -49,7 +49,7 @@ function fomenu() {
     fomenulist.forEach(myFunction);
 
     function myFunction(item, index) {
-        menuitem = $("#menu1").clone()
+        menuitem = $("#menu").clone()
         $(menuitem).text(linktext[item]);
         $(menuitem).attr("id", item);
         $(menuitem).attr("onclick", "oldalnuactiv(this); listaz(" + item + "); ");
@@ -68,21 +68,6 @@ function fomenutomb() {
         }
     }
 
-}
-
-function fomenu() {
-    $("#fomenu").html('');
-
-    fomenulist.forEach(myFunction);
-
-    function myFunction(item, index) {
-        menuitem = $("#menu").clone()
-        $(menuitem).text(linktext[item]);
-        $(menuitem).attr("id", item);
-        $(menuitem).attr("onclick", "fomenuactiv(this); listaz(" + item + "); ");
-        $("#fomenu").append(menuitem);
-
-    }
 }
 
 function listaz(ujcat) {
