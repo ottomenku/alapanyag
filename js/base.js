@@ -2,23 +2,24 @@ mat = 'ms';
 cat = 'rag';
 subcat = 'rag';
 fomenulist = [];
-oldalmenutomb = [];
+oldalmenuobj = {};
 
 function almenutomb() {
     rekord.forEach(myFunction);
     //document.getElementById("demo").innerHTML = text;
 
     function myFunction(item, index) {
-        if (mat == item[0])) {
-        if (!oldalmenutomb.includes(item[1])) {
-            oldalmenutomb.push(item[1]);
-        } else {
-            if (!oldalmenutomb[item[1]].includes(item[2])) {
-                oldalmenutomb[item[1]].push(item[2]);
+        if (mat == item[0]) {
+            if (!oldalmenuobj.includes(item[1])) {
+                oldalmenuobj.push(item[1]);
+            } else {
+                if (!oldalmenuobj[item[1]].includes(item[2])) {
+                    oldalmenuobj[item[1]].push(item[2]);
+                }
             }
         }
-    }
 
+    }
 }
 
 function fomenu() {
