@@ -25,43 +25,12 @@
             </center><br>
         </div>
         <!-- fomenu--->
-        <br>
         <nav id="fomenu" class="nav nav-pills flex-column flex-sm-row">
-            <a class=" fomenu flex-sm-fill text-sm-center nav-link active" aria-current="page" href="index.html">Hiba tipusok</a>
-            <!-- <a id="db" onclick="uzenet()" class="fomenu flex-sm-fill text-sm-center nav-link" href="db.html">Display box </a> -->
-            <a id="db" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="cat_change('db')" href="#">Display box </a>
-            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);cat_change('ms')" href="#">Master shiper</a>
-            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);cat_change('insert')" href="#">Insert</a>
-            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="cat_change('egyeb')" href="#">Egyéb</a>
-            <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenu()" href="#">Alert írás</a>
+        
         </nav>
-        <div style="margin-top:40px" class="col-3 ">
-
-
-            <nav id="probacat" class="nav nav-pills flex-column ">
-                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Ragasztás hibák:</a>
-                <a id="keves" class="btn btn-warning oldalmenu" onclick="oldalmenuactiv(this);" aria-current="page" href="#">Kevés</a>
-                <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Rossz pozíció</a>
-                <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Sok</a>
-            </nav>
-
-            <nav class="nav nav-pills flex-column ">
-                <!-- <a id="db" onclick="uzenet()" class="fomenu flex-sm-fill text-sm-center nav-link" href="db.html">Display box </a> -->
-                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Kivágás hibák:</a>
-                <a class="btn btn-danger oldalmenu " href="#">Gyenge</a>
-                <a class="btn btn-warning oldalmenu " href="#">   Lenyomatos</a>
-                <a class="btn btn-warning oldalmenu " href="#">   szemetes</a>
-                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Krizline hibák:</a>
-                <a class="btn btn-warning oldalmenu " href="#">Gyenge, hiányzik</a>
-                <a class="btn btn-warning oldalmenu " href="#"> más tipus</a>
-                <a class="btn btn-warning oldalmenu " href="#">  roszz helyen van</a>
-                <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">nyomtatás hibák:</a>
-                <a class="btn btn-warning oldalmenu " href="#">Hiányos</a>
-                <a class="btn btn-warning oldalmenu " href="#"> foltosc, szennyezett</a>
-
-                <a class="btn btn-warning oldalmenu " href="#"> Színhibás</a>
-                <a class="btn btn-warning oldalmenu " href="#"> Artwork</a>
-
+             <!-- oldalmenu--->
+        <div id="oldalmenu" style="margin-top:40px" class="col-3 ">
+            
         </div>
 
         <!--tartalom-->
@@ -72,10 +41,11 @@
 
         <div id="hiddenhtmlpart" hidden class="">
 
-            <a id="menu1" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);" href="#">Display box </a>
-
-            <a id="oldalmenukat1" class=" btn btn-secondary oldalmenu " aria-current="page " href="# ">Ragasztás hibák:</a>
-            <a id="oldalmenu1" class="btn btn-warning oldalmenu " onclick="oldalmenuactiv(this);" href="#">Hiányos</a>
+            <a id="menu" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);" href="#">Display box </a>
+            <nav id="catnav" class="nav nav-pills flex-column ">
+            </nav>
+            <a id="oldalmenukat" class=" btn btn-secondary oldalmenu " aria-current="page " href="# ">Ragasztás hibák:</a>
+            <a id="oldalmenu" class="btn btn-warning oldalmenu " onclick="oldalmenuactiv(this);" href="#">Hiányos</a>
 
 
         </div>
