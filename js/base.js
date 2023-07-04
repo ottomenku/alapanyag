@@ -3,8 +3,8 @@ cat = 'rag';
 subcat = 'rag';
 fomenulist = [];
 oldalmenuobj = {};
-
-function almenutomb() {
+//["ms", "rag", "sok", "kep", "note"],
+function oldalmenutomb() {
     rekord.forEach(myFunction);
     //document.getElementById("demo").innerHTML = text;
 
@@ -21,9 +21,30 @@ function almenutomb() {
 
     }
 }
+function oldalmenu() {
+   oldalmenuobj.forEach(myFunction);
 
+    function myFunction(item, index) {
+        blockindex="oldalmenublock"+index;
+        block = $("#oldalmenublock").clone();
+        $(block).attr("id","oldalmenublock"+index );
+      $("#oldalmenu").append(menuitem);
+        menukat=$("#oldalmenukat").clone();
+        $(menukat).attr("id", index);
+         $(menukat).text(linktext[index]);
+        $("#oldalmenublock"+ index).append(menuitem); 
+       item.forEach(myFunction2);
+    function myFunction2(item, index) {
+        menuitem=$("#oldalmenu").clone()
+        $(menuitem).attr("onclick", "oldalmenuactiv(this); listaz(" + item + "); ");
+         $(menuitem).attr("id", item)
+         $(menuitem).text(linktext[item]);
+        $("#"+blockindex).append(menuitem);
+    }
+    }
+}
 function fomenu() {
-    $("#fomenu").html('');
+   // $("#fomenu").html('');
 
     fomenulist.forEach(myFunction);
 
