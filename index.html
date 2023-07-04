@@ -36,11 +36,16 @@
             <a class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenu()" href="#">Alert írás</a>
         </nav>
         <div style="margin-top:40px" class="col-3 ">
-            <nav class="nav nav-pills flex-column ">
+
+
+            <nav id="probacat" class="nav nav-pills flex-column ">
                 <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Ragasztás hibák:</a>
-                <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Kevés</a>
+                <a id="keves" class="btn btn-warning oldalmenu" onclick="oldalmenuactiv(this);" aria-current="page" href="#">Kevés</a>
                 <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Rossz pozíció</a>
                 <a class="btn btn-warning oldalmenu" aria-current="page" href="#">Sok</a>
+            </nav>
+
+            <nav class="nav nav-pills flex-column ">
                 <!-- <a id="db" onclick="uzenet()" class="fomenu flex-sm-fill text-sm-center nav-link" href="db.html">Display box </a> -->
                 <a class="btn btn-secondary oldalmenu" aria-current="page" href="#">Kivágás hibák:</a>
                 <a class="btn btn-danger oldalmenu " href="#">Gyenge</a>
@@ -56,7 +61,7 @@
 
                 <a class="btn btn-warning oldalmenu " href="#"> Színhibás</a>
                 <a class="btn btn-warning oldalmenu " href="#"> Artwork</a>
-            </nav>
+
         </div>
 
         <!--tartalom-->
