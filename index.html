@@ -12,9 +12,10 @@
             // alert("ready!");
             fomenutomb();
             fomenu();
-            oldalmenutomb();
-           // oldalmenu();
-           // alert('js ok');
+            basefomenuactiv()
+            oldalmenu();
+            // oldalmenu();
+            // alert('js ok');
         });
     </script>
 </head>
@@ -29,11 +30,11 @@
         </div>
         <!-- fomenu--->
         <nav id="fomenu" class="nav nav-pills flex-column flex-sm-row">
-        
+
         </nav>
-             <!-- oldalmenu--->
+        <!-- oldalmenu--->
         <div id="oldalmenu" style="margin-top:40px" class="col-3 ">
-            
+
         </div>
 
         <!--tartalom-->
@@ -44,11 +45,11 @@
 
         <div id="hiddenhtmlpart" hidden class="">
 
-            <a id="menu" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenuactiv(this);" href="#">Display box </a>
+            <a id="menu" class="fomenu flex-sm-fill text-sm-center nav-link" onclick="fomenulistaz(this);" href="#">Display box </a>
             <nav id="oldalmenublock" class="nav nav-pills flex-column ">
             </nav>
-            <a id="oldalmenukat" class=" btn btn-secondary oldalmenu " aria-current="page " href="# ">Ragasztás hibák:</a>
-            <a id="oldalmenu" class="btn btn-warning oldalmenu " onclick="oldalmenuactiv(this);" href="#">Hiányos</a>
+            <span id="oldalmenukat" class=" btn btn-secondary oldalmenu " aria-current="page ">Ragasztás hibák:</span>
+            <a id="oldalmenuitem" class="btn btn-warning oldalmenu " onclick="oldalmenuactiv(this);" href="#">Hiányos</a>
 
 
         </div>

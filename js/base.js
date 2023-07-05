@@ -1,4 +1,4 @@
-mat = 'ms';
+mat = 'db';
 cat = 'rag';
 subcat = 'rag';
 fomenulist = [];
@@ -15,97 +15,59 @@ function inobj(obj, keres) {
     return found;
 }
 
-function oldalmenutomb() {
+function oldalmenu() {
+    $("#oldalmenu").html('');
+    rekord.forEach(oldalmenus);
 
-    //rekord.forEach(myFunction);
+}
 
-oldalmenuobj = rekord.reduce((ret,item) => {
+function oldalmenus(item, index) {
 
     kat = item[1];
-        menu = item[2];
-        if (mat == item[0]) {
-            if (!inobj(oldalmenuobj, kat)) {
-                oldalmenuobj[kat] = [];
-            } 
-            if (!oldalmenuobj[kat].includes(menu)) {
-			premenu=oldalmenuobj[kat];
-//console.log(menu);
-			premenu.push(menu);
-console.log(premenu);
-               oldalmenuobj[kat]=premenu;
-            }           
+    menuitem = item[2];
+
+
+    if (mat == item[0]) {
+
+        if (!$('#block' + kat).length) {
+            oldalmenublock(kat);
         }
-ret=oldalmenuobj;
 
-    return ret;
-})
-
-    function myFunction(item, index,oldalmenuobj) {
-        kat = item[1];
-        menu = item[2];
-        if (mat == item[0]) {
-            if (!inobj(oldalmenuobj, kat)) {
-                oldalmenuobj[kat] = [];
-            } 
-            if (!oldalmenuobj[kat].includes(menu)) {
-			premenu=oldalmenuobj[kat];
-//console.log(menu);
-			premenu.push(menu);
-console.log(premenu);
-               oldalmenuobj[kat]=premenu;
-            }           
+        if (!$('#kat' + kat).length) {
+            oldalmenukat(kat);
         }
-    }    
-
-console.log(oldalmenuobj);
-}
-
-function oldalmenu() {
-
-
-    Object.entries(oldalmenuobj).forEach(entry => {
-        const [key, value] = entry;
-        // console.log(key, value);
-        blockindex = "oldalmenublock" + key;
-        block = $("#oldalmenublock").clone();
-        $(block).attr("id", blockindex);
-        $("#oldalmenu").append(block);
-
-
-        menukat = $("#oldalmenukat").clone();
-        $(menukat).attr("id", key);
-        $(menukat).text(linktext[key]);
-        $("#oldalmenublock" + key).append(menuitem);
-
-    });
-
-}
-/*
-
-function oldalmenu() {
-    oldalmenuobj.forEach(myFunction);
-
-    function myFunction(item, index) {
-        blockindex = "oldalmenublock" + index;
-        block = $("#oldalmenublock").clone();
-        $(block).attr("id", "oldalmenublock" + index);
-        $("#oldalmenu").append(menuitem);
-        menukat = $("#oldalmenukat").clone();
-        $(menukat).attr("id", index);
-        $(menukat).text(linktext[index]);
-        $("#oldalmenublock" + index).append(menuitem);
-        item.forEach(myFunction2);
-
-        function myFunction2(item, index) {
-            menuitem = $("#oldalmenu").clone()
-            $(menuitem).attr("onclick", "oldalmenuactiv(this); listaz(" + item + "); ");
-            $(menuitem).attr("id", item)
-            $(menuitem).text(linktext[item]);
-            $("#" + blockindex).append(menuitem);
+        if (!$('#' + kat + menuitem).length) {
+            oldalmenuitem(kat, menuitem);
         }
+
     }
 }
-*/
+
+
+function oldalmenublock(kat) {
+
+    block = $("#oldalmenublock").clone();
+    $(block).attr("id", 'block' + kat);
+    $("#oldalmenu").append(block);
+
+}
+
+function oldalmenukat(kat) {
+
+    menukat = $("#oldalmenukat").clone();
+    $(menukat).attr("id", 'kat' + kat);
+    $(menukat).text(linktext[kat]);
+    $("#block" + kat).append(menukat);
+}
+
+function oldalmenuitem(kat, itemid) {
+
+    item = $("#oldalmenuitem").clone();
+    $(item).attr("id", kat + itemid);
+    $(item).text(linktext[itemid]);
+    $("#block" + kat).append(item);
+}
+
 function fomenu() {
     // $("#fomenu").html('');
 
@@ -115,7 +77,7 @@ function fomenu() {
         menuitem = $("#menu").clone()
         $(menuitem).text(linktext[item]);
         $(menuitem).attr("id", item);
-        $(menuitem).attr("onclick", "fomenuactiv(this); listaz(" + item + "); ");
+        //   $(menuitem).attr("onclick", "fomenuactiv(this); listaz(" + item + "); ");
         $("#fomenu").append(menuitem);
 
     }
@@ -133,8 +95,11 @@ function fomenutomb() {
 
 }
 
-function listaz(ujcat) {
-    alert("listaz");
+function fomenulistaz(e) {
+    fomenuactiv(e);
+    mat = e.id;
+    oldalmenu();
+
 }
 
 function cat_change(ujcat) {
@@ -149,7 +114,12 @@ function kiir() {
 function fomenuactiv(e) {
     $(".fomenu").removeClass("active");
     $(e).addClass("active");
-    mat = e.id;
+    // alert(mat);
+}
+
+function basefomenuactiv() {
+    $(".fomenu").removeClass("active");
+    $("#" + mat).addClass("active");
     // alert(mat);
 }
 
