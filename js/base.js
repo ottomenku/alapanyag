@@ -16,24 +16,48 @@ function inobj(obj, keres) {
 }
 
 function oldalmenutomb() {
-    rekord.forEach(myFunction);
-    //document.getElementById("demo").innerHTML = text;
 
-    function myFunction(item, index) {
+    //rekord.forEach(myFunction);
+
+oldalmenuobj = rekord.reduce((ret,item) => {
+
+    kat = item[1];
+        menu = item[2];
+        if (mat == item[0]) {
+            if (!inobj(oldalmenuobj, kat)) {
+                oldalmenuobj[kat] = [];
+            } 
+            if (!oldalmenuobj[kat].includes(menu)) {
+			premenu=oldalmenuobj[kat];
+//console.log(menu);
+			premenu.push(menu);
+console.log(premenu);
+               oldalmenuobj[kat]=premenu;
+            }           
+        }
+ret=oldalmenuobj;
+
+    return ret;
+})
+
+    function myFunction(item, index,oldalmenuobj) {
         kat = item[1];
         menu = item[2];
         if (mat == item[0]) {
             if (!inobj(oldalmenuobj, kat)) {
-                oldalmenuobj[kat] = []
-                    // oldalmenuobj.push({ kat: [] });
-            } else {
-                if (!oldalmenuobj[kat].includes(menu)) {
-                    oldalmenuobj[kat].push(menu);
-                }
-            }
+                oldalmenuobj[kat] = [];
+            } 
+            if (!oldalmenuobj[kat].includes(menu)) {
+			premenu=oldalmenuobj[kat];
+//console.log(menu);
+			premenu.push(menu);
+console.log(premenu);
+               oldalmenuobj[kat]=premenu;
+            }           
         }
+    }    
 
-    }
+console.log(oldalmenuobj);
 }
 
 function oldalmenu() {
