@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function() {
+       
+            // alert('js ok');
+        });
+    </script>
+</head>
+
+<body>
+
+    <div class="col-10 offset-md-1">
+        <div style="background-color:blue"> <br>
+            <center>
+                <h3 style="color: white;">Packing alapanyag hibák, és kezelésük: </h3>
+            </center><br>
+        </div>
+        <!-- fomenu--->
+        <nav id="fomenu" class="nav nav-pills lex-column flex-sm-row">
+
+        </nav>
+        <div class="row">
+            <!-- oldalmenu--->
+            <div id="oldalmenu" style="margin-top:40px" class="col-3 ">
+
+            </div>
+        </div>
+            <!--tartalom-->
+            <div id="content" class="col-9 row" style="margin-top:20px">
+
+           <div class="col-10">     	
+         			<textarea id="msg" name="msg" 
+            			placeholder="Write some message ..." style="height:100px">     </textarea>
+          		</div>
+        
+          	  <div class="col-3">
+           			<select id="mattype">
+              			<option selected value="db">-- Displaybox --</option>
+             				<option value="ms">Mastershipper</option>
+              			<option value="tray">Tray-Insert</option>
+                    <option value="egyeb">Egyeb</option>        
+              </select>
+            </div>  
+    	      <div class="col-3">
+           			<select id="fokat">
+              			<option selected value="anyag">-- Alapanyag --</option>
+             				<option value="nyom">Nyomtatás</option>
+                  	<option value="rag">Ragasztás</option>
+              			<option value="kivag">Kivágás</option>
+                    <option value="crease">Creaseline</option>        
+              </select>
+            </div>
+<!--subkat-------------------------------------->
+              
+                <div class="col-3">
+           			<select id="anyagsub">
+              			<option selected value="">--Túl Puha --</option>
+             				<option value="India">Túl kemény</option>
+              			<option value="Japan">Szennyezet</option>
+                    <option value="USA">Sérült</option>  
+                    <option value="USA">Súly</option> 
+                    <option value="USA">Kopott-karcos</option> 
+                    <option value="USA">Maradékos</option> 
+
+                  
+              </select>
+            </div> 
+          <div>
+            <textarea id="msg" name="msg" 
+            	placeholder="Write some message ..." style="height:100px">     </textarea>
+          </div>
+          <div>
+            <input type="button" id="bt" 
+                   value="Save data to file" onclick="saveFile()" />
+          </div>
+
+   
+            
+      </div>
+
+
+        <!--part-->
+
+        <div id="hiddenhtmlpart" hidden class="">
+
+        </div>
+
+
+    </div>
+ <script src="js/formrekordok.js "></script>
+    <script src="js/form.js "></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js " integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2 " crossorigin="anonymous "></script>
+</body>
+
+</html>
