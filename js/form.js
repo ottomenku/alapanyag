@@ -1,5 +1,5 @@
 function selectlist(selectlistid,lang) {
-    formrekord.forEach(myFunction)
+    mattype.forEach(myFunction)
 
     function myFunction(item, index) {
       $('#matlist').append(`<option value="'+item[0]+'">
